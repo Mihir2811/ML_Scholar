@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Score Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .form-section {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .about-section {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Student Score Predictor</h1>
+    </header>
+
+    <section class="form-section">
+        <h2>Predict Your Score</h2>
+        <form id="predictionForm" method="POST" action="/predict">
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" name="studentName" required>
+
+            <label for="studyHours">Study Hours (decimal):</label>
+            <input type="number" step="0.01" id="studyHours" name="studyHours" required>
+
+            <button type="submit">Predict</button>
+        </form>
+        
+    </section>
+    <section class="about-section">
+        <h2>About</h2>
+        <p>This model predicts a student's score based on the number of hours they study. It is a simple linear regression model trained on a dataset of students' study hours and their corresponding scores.</p>
+    </section>
+
+    
+</body>
+</html>
