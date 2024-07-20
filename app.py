@@ -22,7 +22,7 @@ def predict():
     print(prediction)
 
     if(prediction>=0):
-        return render_template('index2.html',prediction_result= prediction)
+        return render_template('index.html',prediction_result= prediction)
     else:
         print('false')
 
